@@ -138,15 +138,15 @@ Questions I keep returning to: When does reranking earn its latency? How should 
 ## Activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityam260206/adityam260206/output/activity-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adityam260206/adityam260206/output/activity-light.svg" />
-  <img src="https://raw.githubusercontent.com/adityam260206/adityam260206/output/activity-light.svg" width="100%" alt="Contribution activity over the last 12 months" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityam260206/adityam260206/refs/heads/output/activity-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adityam260206/adityam260206/refs/heads/output/activity-light.svg" />
+  <img src="https://raw.githubusercontent.com/adityam260206/adityam260206/refs/heads/output/activity-light.svg" width="100%" alt="Contribution activity over the last 12 months" />
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityam260206/adityam260206/output/languages-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adityam260206/adityam260206/output/languages-light.svg" />
-  <img src="https://raw.githubusercontent.com/adityam260206/adityam260206/output/languages-light.svg" width="100%" alt="Language share across public repositories" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityam260206/adityam260206/refs/heads/output/languages-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adityam260206/adityam260206/refs/heads/output/languages-light.svg" />
+  <img src="https://raw.githubusercontent.com/adityam260206/adityam260206/refs/heads/output/languages-light.svg" width="100%" alt="Language share across public repositories" />
 </picture>
 
 **Recently updated**
