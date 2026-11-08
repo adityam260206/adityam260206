@@ -1,0 +1,21 @@
+{
+  "login": "adityam260206",
+  "exclude_repos": [
+    "adityam260206",
+    "First-Repository",
+    "localRepo",
+    "Chatbot",
+    "neetcode-submissions"
+  ],
+  "recent_count": 4,
+  "languages_top": 6,
+  "description_overrides": {
+    "Agentic-AI-Institutional-Knowledge-System": "Local agentic RAG over institutional documents: hybrid retrieval, reranking, RBAC, citations",
+    "hirelens": "Explainable AI recruitment platform with deterministic, evidence-backed match scoring",
+    "Content-Generator-AI": "Evaluation framework comparing three LLM quiz-generation strategies",
+    "MSME": "MSME360: multi-tenant business operations platform (team project)",
+    "Scholera-Home-Assignment": "Evidence-based evaluation of AI-generated quiz content",
+    "Airbnb-Clone": "Server-rendered Express app with host and user routes",
+    "Amazon-Clone": "Static storefront layout in HTML, CSS and JavaScript"
+  }
+}

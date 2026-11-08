@@ -1,0 +1,67 @@
+# Rebuilds the activity / language cards and the "Recently updated" table.
+# Cards go to the orphan `output` branch as a single force-pushed commit, so
+# main's history only changes when the README table actually changes.
+name: Refresh profile
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # daily, 03:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/refresh-profile.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: refresh-profile
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Build cards and README table
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/build_profile.py cards --out dist
+          python3 scripts/build_profile.py readme
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit README if the table changed
+        run: |
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "README unchanged"
+          else
+            git commit -m "Refresh recently updated repositories"
+            git push origin HEAD:main
+          fi
+
+      - name: Publish cards to the output branch
+        run: |
+          export GIT_INDEX_FILE="$RUNNER_TEMP/output.index"
+          git --work-tree=dist add -A
+          tree=$(git write-tree)
+          unset GIT_INDEX_FILE
+          git fetch --depth=1 origin +refs/heads/output:refs/remotes/origin/output 2>/dev/null || true
+          if [ "$(git rev-parse -q --verify 'refs/remotes/origin/output^{tree}' 2>/dev/null)" = "$tree" ]; then
+            echo "Cards unchanged"
+            exit 0
+          fi
+          commit=$(git commit-tree "$tree" -m "Profile cards $(date -u +%F)")
+          git push --force origin "$commit:refs/heads/output"

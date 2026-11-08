@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-labelledby="t d">
+  <title id="t">Aditya Malekar</title>
+  <desc id="d">Computer Engineering at SPIT Mumbai. Agentic AI, retrieval-augmented generation and research-oriented software engineering.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b16"/>
+      <stop offset="0.6" stop-color="#0b1324"/>
+      <stop offset="1" stop-color="#0e1a33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#1e2a44"/>
+    </pattern>
+    <clipPath id="frame"><rect width="1200" height="340" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .edge { stroke: #24324f; stroke-width: 1.2; fill: none; }
+    .path { stroke: url(#accent); stroke-width: 2; fill: none; stroke-dasharray: 6 8; animation: flow 3.2s linear infinite; }
+    .node { fill: #0b1324; stroke: #2b3a5c; stroke-width: 1.4; }
+    .hot  { fill: #0b1324; stroke: #22d3ee; stroke-width: 1.8; }
+    .core { fill: #22d3ee; animation: pulse 3.2s ease-in-out infinite; }
+    .lbl  { fill: #7b8bad; font-size: 11px; letter-spacing: .08em; }
+    @keyframes flow  { to { stroke-dashoffset: -56; } }
+    @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .path, .core { animation: none; } }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#dots)"/>
+    <rect width="1200" height="340" fill="url(#glow)"/>
+
+    <!-- Retrieval graph motif: query -> dense + sparse -> fusion -> rerank -> answer -->
+    <g transform="translate(720 0)">
+      <path class="edge" d="M40 170 L140 100 M40 170 L140 240 M140 100 L250 170 M140 240 L250 170 M250 170 L350 170 M350 170 L430 110 M350 170 L430 230 M140 100 L250 60 M140 240 L250 280 M250 60 L350 170"/>
+      <path class="path" d="M40 170 L140 100 L250 170 L350 170 L430 110"/>
+      <path class="path" d="M40 170 L140 240 L250 170"/>
+
+      <circle class="hot"  cx="40"  cy="170" r="9"/>
+      <circle class="core" cx="40"  cy="170" r="3.5"/>
+      <circle class="hot"  cx="140" cy="100" r="8"/>
+      <circle class="hot"  cx="140" cy="240" r="8"/>
+      <circle class="node" cx="250" cy="60"  r="6"/>
+      <circle class="node" cx="250" cy="280" r="6"/>
+      <circle class="hot"  cx="250" cy="170" r="10"/>
+      <circle class="core" cx="250" cy="170" r="4"/>
+      <circle class="hot"  cx="350" cy="170" r="8"/>
+      <circle class="hot"  cx="430" cy="110" r="9"/>
+      <circle class="core" cx="430" cy="110" r="3.5"/>
+      <circle class="node" cx="430" cy="230" r="6"/>
+
+      <text class="mono lbl" x="40"  y="200" text-anchor="middle">QUERY</text>
+      <text class="mono lbl" x="140" y="80"  text-anchor="middle">DENSE</text>
+      <text class="mono lbl" x="140" y="268" text-anchor="middle">BM25</text>
+      <text class="mono lbl" x="250" y="203" text-anchor="middle">RRF</text>
+      <text class="mono lbl" x="350" y="200" text-anchor="middle">RERANK</text>
+      <text class="mono lbl" x="430" y="90"  text-anchor="middle">ANSWER</text>
+    </g>
+
+    <!-- Identity -->
+    <text class="mono" x="72" y="92" fill="#22d3ee" font-size="14" letter-spacing="2.5">COMPUTER ENGINEERING · SPIT MUMBAI</text>
+    <text class="sans" x="70" y="166" fill="#f1f5ff" font-size="62" font-weight="700" letter-spacing="-1">Aditya Malekar</text>
+    <rect x="72" y="188" width="64" height="3" rx="1.5" fill="url(#accent)"/>
+    <text class="sans" x="72" y="228" fill="#c4cee3" font-size="21">Agentic AI · Retrieval-Augmented Generation · Software Engineering</text>
+    <text class="mono" x="72" y="266" fill="#7b8bad" font-size="14">building LLM systems that answer from evidence, not memory</text>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="18" fill="none" stroke="#1b2742"/>
+</svg>
