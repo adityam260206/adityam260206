@@ -154,10 +154,10 @@ Questions I keep returning to: When does reranking earn its latency? How should 
 <!-- RECENT:START -->
 | Repository | What it is | Main language | Last push |
 |---|---|---|---|
+| [**Agentic-AI-Institutional-Knowledge-System**](https://github.com/adityam260206/Agentic-AI-Institutional-Knowledge-System) | Local agentic RAG over institutional documents: hybrid retrieval, reranking, RBAC, citations | Python | Nov 2026 |
 | [**MSME**](https://github.com/adityam260206/MSME) | MSME360: multi-tenant business operations platform (team project) | JavaScript | Nov 2026 |
 | [**hirelens**](https://github.com/adityam260206/hirelens) | Explainable AI recruitment platform with deterministic, evidence-backed match scoring | TypeScript | Oct 2026 |
 | [**Content-Generator-AI**](https://github.com/adityam260206/Content-Generator-AI) | Evaluation framework comparing three LLM quiz-generation strategies | TypeScript | Oct 2026 |
-| [**Scholera-Home-Assignment**](https://github.com/adityam260206/Scholera-Home-Assignment) | Evidence-based evaluation of AI-generated quiz content | — | Aug 2026 |
 <!-- RECENT:END -->
 
 <sub>Cards and table refresh daily from the GitHub API via a workflow in this repository. No third-party stats service.</sub>
